@@ -22,6 +22,11 @@ https://goodies.pixabay.com/jquery/auto-complete/demo.html
 
 ## Changelog
 
+### Version 1.0.8 - 2017/03/18
+
+* Added 'width' option for more flexibility
+* Added obfuscated css-file version
+
 ### Version 1.0.7 - 2015/08/15
 
 * Fixed #29: Select item with tab.

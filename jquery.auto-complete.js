@@ -39,9 +39,13 @@
             that.updateSC = function(resize, next){
                 that.sc.css({
                     top: that.offset().top + that.outerHeight(),
-                    left: that.offset().left,
-                    width: that.outerWidth()
+                    left: that.offset().left
                 });
+                if(o.width !== 'auto'){
+                    that.sc.css({width: o.width});
+                } else {
+                    that.sc.css({width: that.outerWidth()});
+                }
                 if (!resize) {
                     that.sc.show();
                     if (!that.sc.maxHeight) that.sc.maxHeight = parseInt(that.sc.css('max-height'));
@@ -153,10 +157,10 @@
             });
         });
     }
-
     $.fn.autoComplete.defaults = {
         source: 0,
         minChars: 3,
+        width: 'auto',
         delay: 150,
         cache: 1,
         menuClass: '',
